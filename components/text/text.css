@@ -1,9 +1,0 @@
-@value text-color, disabled-color, secondary-color from  "../global/global.css";
-
-.text {
-  color: text-color;
-}
-
-.info {
-  color: secondary-color;
-}

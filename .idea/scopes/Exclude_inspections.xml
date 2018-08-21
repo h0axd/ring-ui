@@ -1,3 +1,0 @@
-<component name="DependencyValidationManager">
-  <scope name="Exclude inspections" pattern="file:*.examples.html||file:packages/*generator*/*/templates//*" />
-</component>
