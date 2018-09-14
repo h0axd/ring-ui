@@ -2,7 +2,7 @@ window.source = {
   "title": "DataList Ng",
   "url": "data-list-ng.html",
   "type": "js",
-  "content": "/**\n * @name DataList Ng\n * @category Legacy Angular\n * @framework Angular\n * @description Provides an Angular wrapper for DataList.\n * @example-file ./data-list-ng.examples.html\n */\nimport angularComponentFactory from '../global/angular-component-factory';\nimport DataList from '../data-list/data-list';\n\nexport default angularComponentFactory(DataList, 'DataList').name;\n",
+  "content": "/**\n * @name DataList Ng\n * @category Legacy Angular\n * @tags Ring UI Language\n * @framework Angular\n * @description Provides an Angular wrapper for DataList.\n * @example-file ./data-list-ng.examples.html\n */\nimport angularComponentFactory from '../global/angular-component-factory';\nimport DataList from '../data-list/data-list';\n\nexport default angularComponentFactory(DataList, 'DataList').name;\n",
   "examples": [
     {
       "name": "Data List Ng",
@@ -26,6 +26,7 @@ window.source = {
   "attrs": {
     "name": "DataList Ng",
     "category": "Legacy Angular",
+    "tags": "Ring UI Language",
     "framework": "Angular",
     "description": "Provides an Angular wrapper for DataList.",
     "example-file": "./data-list-ng.examples.html"

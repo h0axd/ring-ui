@@ -2,7 +2,7 @@ window.source = {
   "title": "Input Sizes",
   "url": "input-size.html",
   "type": "scss",
-  "content": "@import \"../global/global\";\n\n$ring-input-xs: 50px;\n$ring-input-s: 100px;\n$ring-input-md: 200px;\n$ring-input-l: 400px;\n\n/**\n * @name Input Sizes\n * @category Style-only\n * @example-file ./input-size.examples.html\n */\n@mixin set-width-in-pixels($width) {\n  display: inline-block;\n  width: $width;\n\n  & ~ .ring-error-bubble {\n    left: $width + 2;\n  }\n}\n\n.ring-input-size_xs.ring-input-size_xs {\n  @include set-width-in-pixels($ring-input-xs);\n}\n\n.ring-input-size_s.ring-input-size_s {\n  @include set-width-in-pixels($ring-input-s);\n}\n\n.ring-input-size_md.ring-input-size_md {\n  @include set-width-in-pixels($ring-input-md);\n}\n\n.ring-input-size_l.ring-input-size_l {\n  @include set-width-in-pixels($ring-input-l);\n}\n",
+  "content": "@import \"../global/global\";\n@import \"../error-bubble/error-bubble\";\n\n$ring-input-xs: 50px;\n$ring-input-s: 100px;\n$ring-input-md: 200px;\n$ring-input-l: 400px;\n\n/**\n * @name Input Sizes\n * @category Style-only\n * @example-file ./input-size.examples.html\n */\n@mixin set-width-in-pixels($width) {\n  display: inline-block;\n  width: $width;\n\n  & ~ .ring-error-bubble {\n    left: $width + 2;\n  }\n}\n\n.ring-input-size_xs.ring-input-size_xs {\n  @include set-width-in-pixels($ring-input-xs);\n}\n\n.ring-input-size_s.ring-input-size_s {\n  @include set-width-in-pixels($ring-input-s);\n}\n\n.ring-input-size_md.ring-input-size_md {\n  @include set-width-in-pixels($ring-input-md);\n}\n\n.ring-input-size_l.ring-input-size_l {\n  @include set-width-in-pixels($ring-input-l);\n}\n",
   "examples": [
     {
       "name": "Sizes of inputs",
