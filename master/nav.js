@@ -451,6 +451,11 @@ window.navData = [
         "legacy": false
       },
       {
+        "url": "panel-ng.html",
+        "title": "Panel Ng",
+        "legacy": false
+      },
+      {
         "url": "permissions-ng.html",
         "title": "Permissions Ng",
         "legacy": false

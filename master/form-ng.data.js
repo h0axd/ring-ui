@@ -16,7 +16,7 @@ window.source = {
         },
         {
           "type": "js",
-          "content": "\nimport angular from 'angular';\n\nimport '@jetbrains/ring-ui/components/form/form.scss';\nimport '@jetbrains/ring-ui/components/panel/panel.scss';\n\nimport ButtonNg from '@jetbrains/ring-ui/components/button-ng/button-ng';\nimport SelectNg from '@jetbrains/ring-ui/components/select-ng/select-ng';\nimport CheckboxNg from '@jetbrains/ring-ui/components/checkbox-ng/checkbox-ng';\nimport FormNg from '@jetbrains/ring-ui/components/form-ng/form-ng';\nimport InputNg from '@jetbrains/ring-ui/components/input-ng/input-ng';\n\nangular.module('Example.form', [FormNg, CheckboxNg, SelectNg, ButtonNg, InputNg]).\ncontroller('FormExampleCtrl', function ($scope) {\n  this.checkedModel = true;\n  this.data = [{name: 'Ada'}, {name: 'Nik'}];\n});\n  ",
+          "content": "\nimport angular from 'angular';\n\nimport '@jetbrains/ring-ui/components/form/form.scss';\n\nimport ButtonNg from '@jetbrains/ring-ui/components/button-ng/button-ng';\nimport SelectNg from '@jetbrains/ring-ui/components/select-ng/select-ng';\nimport CheckboxNg from '@jetbrains/ring-ui/components/checkbox-ng/checkbox-ng';\nimport FormNg from '@jetbrains/ring-ui/components/form-ng/form-ng';\nimport InputNg from '@jetbrains/ring-ui/components/input-ng/input-ng';\n\nangular.module('Example.form', [FormNg, CheckboxNg, SelectNg, ButtonNg, InputNg]).\ncontroller('FormExampleCtrl', function ($scope) {\n  this.checkedModel = true;\n  this.data = [{name: 'Ada'}, {name: 'Nik'}];\n});\n  ",
           "showCode": true
         }
       ]
