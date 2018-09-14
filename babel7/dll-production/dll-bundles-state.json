@@ -3,10 +3,6 @@
     "bundle": "vendor",
     "version": "7.0.0"
   },
-  "core-js": {
-    "bundle": "vendor",
-    "version": "2.5.7"
-  },
   "dom4": {
     "bundle": "vendor",
     "version": "1.8.5"
