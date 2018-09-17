@@ -1,1 +1,1 @@
-window.version = '1.0.0-beta.196';
+window.version = '1.0.0-beta.197';
