@@ -1,11 +1,7 @@
 {
-  "babel-polyfill": {
+  "@babel/polyfill": {
     "bundle": "vendor",
-    "version": "6.26.0"
-  },
-  "core-js": {
-    "bundle": "vendor",
-    "version": "2.5.1"
+    "version": "7.0.0"
   },
   "dom4": {
     "bundle": "vendor",
@@ -13,7 +9,7 @@
   },
   "whatwg-fetch": {
     "bundle": "vendor",
-    "version": "2.0.3"
+    "version": "3.0.0"
   },
   "react": {
     "bundle": "vendor",

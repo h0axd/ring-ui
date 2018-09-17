@@ -16,8 +16,6 @@ h3 + div::before, h4 + div::before {
 
     content: 'Lorem ipsum';
 
-    content: 'Lorem ipsum';
-
     display: block;
 
     position: absolute;
@@ -26,8 +24,6 @@ h3 + div::before, h4 + div::before {
 
     z-index: -1;
 
-    -webkit-transform: translateY(-100%);
-
-            transform: translateY(-100%);
+    transform: translateY(-100%);
 }
     
