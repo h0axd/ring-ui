@@ -71,11 +71,6 @@ Also it won't form in FF47 https://bugzilla.mozilla.org/show_bug.cgi?id=594933
   font-size: var(--ring-font-size-smaller);
 }
 
-.input-disabled_f9c {
-  border-color: #dedede;
-  background-color: #f8f8f8;
-}
-
 .ellipsis_894 {
   overflow: hidden;
 
@@ -88,31 +83,19 @@ Also it won't form in FF47 https://bugzilla.mozilla.org/show_bug.cgi?id=594933
 /* Media breakpoints (minimal values) */
 
 /* Media queries */
-.place-under {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 50%;
-  padding: 16px;
-  background-color: #888;
+.icon-example__container {
+  margin-left: -16px;
 }
 
-.head {
-  height: 30px;
+.ring-icon {
+  margin: 8px;
+  padding: 8px;
+  color: #0f5b99;
+  color: var(--ring-link-color);
 }
 
-.target-element {
-  position: static;
-  top: 0;
-  width: 100%;
-  padding: 16px;
-  background-color: #CCC;
-}
-
-.scrollable {
-  height: 1000px;
-  padding: 16px;
-  padding-top: 64px;
-  background-color: #EEE;
+.secondary {
+  fill: #ff008c;
+  fill: var(--ring-link-hover-color);
 }
   

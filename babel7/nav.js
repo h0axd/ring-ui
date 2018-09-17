@@ -328,12 +328,12 @@ window.navData = [
       {
         "url": "badge-ng.html",
         "title": "Badge Ng",
-        "legacy": true
+        "legacy": false
       },
       {
         "url": "breadcrumb-ng.html",
         "title": "Breadcrumb Ng",
-        "legacy": true
+        "legacy": false
       },
       {
         "url": "button-group-ng.html",
@@ -373,7 +373,7 @@ window.navData = [
       {
         "url": "data-list-ng.html",
         "title": "DataList Ng",
-        "legacy": true
+        "legacy": false
       },
       {
         "url": "dialog-ng.html",
@@ -388,7 +388,7 @@ window.navData = [
       {
         "url": "error-message-ng.html",
         "title": "Error Message Ng",
-        "legacy": true
+        "legacy": false
       },
       {
         "url": "error-page-ng.html",
@@ -398,12 +398,12 @@ window.navData = [
       {
         "url": "footer-ng.html",
         "title": "Footer Ng",
-        "legacy": true
+        "legacy": false
       },
       {
         "url": "form-ng.html",
         "title": "Form Ng",
-        "legacy": true
+        "legacy": false
       },
       {
         "url": "group-ng.html",
@@ -433,7 +433,7 @@ window.navData = [
       {
         "url": "loader-inline-ng.html",
         "title": "Loader Inline Ng",
-        "legacy": true
+        "legacy": false
       },
       {
         "url": "loader-ng.html",
@@ -448,6 +448,11 @@ window.navData = [
       {
         "url": "pager-ng.html",
         "title": "Pager Ng",
+        "legacy": false
+      },
+      {
+        "url": "panel-ng.html",
+        "title": "Panel Ng",
         "legacy": false
       },
       {
@@ -498,7 +503,7 @@ window.navData = [
       {
         "url": "sidebar-ng.html",
         "title": "Sidebar Ng",
-        "legacy": true
+        "legacy": false
       },
       {
         "url": "table-legacy-ng.html",
