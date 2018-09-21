@@ -54,6 +54,23 @@ window.source = {
           "showCode": true
         }
       ]
+    },
+    {
+      "name": "Tags Input with too long tag labels",
+      "url": "examples/tags-input/tags-input-with-too-long-tag-labels.html",
+      "disableAutoSize": true,
+      "files": [
+        {
+          "type": "html",
+          "content": "\n<div id=\"demo\" style=\"width: 100px;\"></div>\n  ",
+          "showCode": true
+        },
+        {
+          "type": "js",
+          "content": "\nimport React from 'react';\nimport {render} from 'react-dom';\nimport TagsInput from '@jetbrains/ring-ui/components/tags-input/tags-input';\n\nconst tags = [\n  {key: 'test1', label: 'Label'},\n  {key: 'test2', label: 'Very long label'}\n];\n\nfunction dataSource(query) {\n  return [\n    {key: 'test3', label: 'Very very long label'},\n    {key: 'test4', label: 'Very very very long label'}\n  ];\n}\n\nrender(<TagsInput\n  tags={tags}\n  dataSource={dataSource}\n/>, document.getElementById('demo'));\n  ",
+          "showCode": true
+        }
+      ]
     }
   ],
   "description": "Displays a tags input field.",
