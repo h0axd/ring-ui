@@ -30,12 +30,26 @@
   <script src="../../example-common.js"></script>
   <!-- example content -->
       
-<div id='contenteditable'></div>
+<div class="my-input" id='contenteditable'></div>
 <div id='contenteditable-disabled' style="padding-top: 16px;"></div>
-     
   
+  
+    <style>
+            
+.my-input {
+  padding-left: 4px;
+}
+
+.my-input[disabled] {
+  border: 1px solid #dbdbdb;
+  border: 1px solid var(--ring-border-disabled-color);
+  background-color: #bbb;
+  background-color: var(--ring-disabled-color);
+}
+  
+      </style>
   
   <!-- example assets -->
-                    <script src="../../examples/contenteditable/46af61b61025ee57b6ae83da28dbf79c.js"></script>
+                    <script src="../../examples/contenteditable/18b861eae90bbccc63382be3b1438cd8.js"></script>
             </body>
 </html>

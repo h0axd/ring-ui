@@ -88,7 +88,7 @@ window.navData = [
       {
         "url": "contenteditable.html",
         "title": "ContentEditable",
-        "legacy": true
+        "legacy": false
       },
       {
         "url": "data-list.html",
@@ -113,7 +113,7 @@ window.navData = [
       {
         "url": "error-bubble.html",
         "title": "Error Bubble",
-        "legacy": true
+        "legacy": false
       },
       {
         "url": "error-message.html",
@@ -228,7 +228,7 @@ window.navData = [
       {
         "url": "query-assist.html",
         "title": "Query Assist",
-        "legacy": true
+        "legacy": false
       },
       {
         "url": "radio.html",
