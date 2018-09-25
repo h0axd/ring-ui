@@ -49,8 +49,8 @@ window.source = {
       ]
     },
     {
-      "name": "Low header",
-      "url": "examples/header/low-header.html",
+      "name": "Compact header",
+      "url": "examples/header/compact-header.html",
       "disableAutoSize": false,
       "files": [
         {

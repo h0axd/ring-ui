@@ -2,7 +2,7 @@ window.source = {
   "title": "Toggle",
   "url": "toggle.html",
   "type": "js",
-  "content": "import React, {PureComponent} from 'react';\nimport PropTypes from 'prop-types';\nimport classNames from 'classnames';\n\nimport styles from './toggle.css';\n\n/**\n  * @name Toggle\n  * @category Components\n  * @tags Ring UI Language\n  * @framework React\n  * @constructor\n  * @description Visual toggle wrapper around checkbox.\n  * @example-file ./toggle.examples.html\n  */\n\nexport default class Toggle extends PureComponent {\n  static propTypes = {\n    children: PropTypes.node,\n    name: PropTypes.string,\n    className: PropTypes.string,\n    title: PropTypes.string,\n    defaultChecked: PropTypes.bool,\n    checked: PropTypes.bool,\n    disabled: PropTypes.bool,\n    pale: PropTypes.bool,\n    onChange: PropTypes.func,\n    onTransitionEnd: PropTypes.func\n  };\n\n  render() {\n    const {className, children, disabled, pale, title, onTransitionEnd, ...restProps} = this.props;\n\n    const classes = classNames(\n      className,\n      styles.toggle,\n      disabled && styles.disabled\n    );\n\n    return (\n      <label className={classes} title={title}>\n        <span className={styles.switchWrapper}>\n          <input\n            {...restProps}\n            type=\"checkbox\"\n            disabled={disabled}\n            className={styles.input}\n          />\n\n          <span\n            className={classNames(styles.switch, pale && styles.paleSwitch)}\n            onTransitionEnd={onTransitionEnd}\n          />\n        </span>\n\n        {children && <span className={styles.label}>{children}</span>}\n      </label>\n    );\n  }\n}\n",
+  "content": "import React, {PureComponent} from 'react';\nimport PropTypes from 'prop-types';\nimport classNames from 'classnames';\n\nimport styles from './toggle.css';\n\n/**\n  * @name Toggle\n  * @category Components\n  * @tags Ring UI Language\n  * @framework React\n  * @constructor\n  * @description Displays a checkbox as an animated on/off toggle.\n  * @example-file ./toggle.examples.html\n  */\n\nexport default class Toggle extends PureComponent {\n  static propTypes = {\n    children: PropTypes.node,\n    name: PropTypes.string,\n    className: PropTypes.string,\n    title: PropTypes.string,\n    defaultChecked: PropTypes.bool,\n    checked: PropTypes.bool,\n    disabled: PropTypes.bool,\n    pale: PropTypes.bool,\n    onChange: PropTypes.func,\n    onTransitionEnd: PropTypes.func\n  };\n\n  render() {\n    const {className, children, disabled, pale, title, onTransitionEnd, ...restProps} = this.props;\n\n    const classes = classNames(\n      className,\n      styles.toggle,\n      disabled && styles.disabled\n    );\n\n    return (\n      <label className={classes} title={title}>\n        <span className={styles.switchWrapper}>\n          <input\n            {...restProps}\n            type=\"checkbox\"\n            disabled={disabled}\n            className={styles.input}\n          />\n\n          <span\n            className={classNames(styles.switch, pale && styles.paleSwitch)}\n            onTransitionEnd={onTransitionEnd}\n          />\n        </span>\n\n        {children && <span className={styles.label}>{children}</span>}\n      </label>\n    );\n  }\n}\n",
   "examples": [
     {
       "name": "Toggle",
@@ -22,14 +22,14 @@ window.source = {
       ]
     }
   ],
-  "description": "Visual toggle wrapper around checkbox.",
+  "description": "Displays a checkbox as an animated on/off toggle.",
   "attrs": {
     "name": "Toggle",
     "category": "Components",
     "tags": "Ring UI Language",
     "framework": "React",
     "constructor": "",
-    "description": "Visual toggle wrapper around checkbox.",
+    "description": "Displays a checkbox as an animated on/off toggle.",
     "example-file": "./toggle.examples.html"
   }
 };

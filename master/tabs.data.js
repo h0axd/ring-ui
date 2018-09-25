@@ -2,7 +2,7 @@ window.source = {
   "title": "Tabs",
   "url": "tabs.html",
   "type": "js",
-  "content": "/**\n * @name Tabs\n * @category Components\n * @tags Ring UI Language\n * @framework React\n * @constructor\n * @description Displays a tab set\n * @example-file ./tabs.examples.html\n */\n\nexport {default as Tabs} from './dumb-tabs';\nexport {default as SmartTabs} from './smart-tabs';\nexport {default as Tab} from './tab';\n",
+  "content": "/**\n * @name Tabs\n * @category Components\n * @tags Ring UI Language\n * @framework React\n * @constructor\n * @description Displays a tab set.\n * @example-file ./tabs.examples.html\n */\n\nexport {default as Tabs} from './dumb-tabs';\nexport {default as SmartTabs} from './smart-tabs';\nexport {default as Tab} from './tab';\n",
   "examples": [
     {
       "name": "Tabs",
@@ -105,14 +105,14 @@ window.source = {
       ]
     }
   ],
-  "description": "Displays a tab set",
+  "description": "Displays a tab set.",
   "attrs": {
     "name": "Tabs",
     "category": "Components",
     "tags": "Ring UI Language",
     "framework": "React",
     "constructor": "",
-    "description": "Displays a tab set",
+    "description": "Displays a tab set.",
     "example-file": "./tabs.examples.html"
   }
 };

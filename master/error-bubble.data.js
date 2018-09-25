@@ -2,7 +2,7 @@ window.source = {
   "title": "Error Bubble",
   "url": "error-bubble.html",
   "type": "js",
-  "content": "import React, {Children, cloneElement, PureComponent} from 'react';\nimport PropTypes from 'prop-types';\nimport classNames from 'classnames';\n\nimport Popup from '../popup/popup';\nimport {Directions} from '../popup/position';\n\nimport styles from './error-bubble.css';\n/**\n * @name Error Bubble\n * @category Components\n * @tags Ring UI Language\n * @constructor\n * @description Displays an error bubble near the wrapped input component when a non-empty string is passed to the `error` prop.\n * Passes any prop except `className` down to input.\n * @example-file ./error-bubble.examples.html\n */\n\nexport default class ErrorBubble extends PureComponent {\n  static propTypes = {\n    error: PropTypes.string,\n    className: PropTypes.string,\n    children: PropTypes.node\n  };\n\n  render() {\n    const {children, className, ...restProps} = this.props;\n\n    const errorBubbleClasses = classNames(styles.errorBubble, className);\n\n    return (\n      <div className={styles.errorBubbleWrapper}>\n        {Children.map(children, child => cloneElement(child, restProps))}\n\n        {restProps.error && (\n          <Popup\n            className={styles.errorBubblePopup}\n            hidden={false}\n            attached={false}\n            directions={[Directions.RIGHT_CENTER, Directions.RIGHT_BOTTOM, Directions.RIGHT_TOP]}\n          >\n            <div\n              className={errorBubbleClasses}\n              data-test=\"ring-error-bubble\"\n            >\n              {restProps.error}\n            </div>\n          </Popup>\n        )}\n      </div>\n    );\n  }\n}\n\n",
+  "content": "import React, {Children, cloneElement, PureComponent} from 'react';\nimport PropTypes from 'prop-types';\nimport classNames from 'classnames';\n\nimport Popup from '../popup/popup';\nimport {Directions} from '../popup/position';\n\nimport styles from './error-bubble.css';\n/**\n * @name Error Bubble\n * @category Components\n * @tags Ring UI Language\n * @constructor\n * @description Displays an error bubble near the wrapped input component when a non-empty string is passed to the `error` prop.\n * Passes any prop except `className` down to the input.\n * @example-file ./error-bubble.examples.html\n */\n\nexport default class ErrorBubble extends PureComponent {\n  static propTypes = {\n    error: PropTypes.string,\n    className: PropTypes.string,\n    children: PropTypes.node\n  };\n\n  render() {\n    const {children, className, ...restProps} = this.props;\n\n    const errorBubbleClasses = classNames(styles.errorBubble, className);\n\n    return (\n      <div className={styles.errorBubbleWrapper}>\n        {Children.map(children, child => cloneElement(child, restProps))}\n\n        {restProps.error && (\n          <Popup\n            className={styles.errorBubblePopup}\n            hidden={false}\n            attached={false}\n            directions={[Directions.RIGHT_CENTER, Directions.RIGHT_BOTTOM, Directions.RIGHT_TOP]}\n          >\n            <div\n              className={errorBubbleClasses}\n              data-test=\"ring-error-bubble\"\n            >\n              {restProps.error}\n            </div>\n          </Popup>\n        )}\n      </div>\n    );\n  }\n}\n\n",
   "examples": [
     {
       "name": "Error Bubble",
@@ -39,13 +39,13 @@ window.source = {
       ]
     }
   ],
-  "description": "Displays an error bubble near the wrapped input component when a non-empty string is passed to the `error` prop.\nPasses any prop except `className` down to input.",
+  "description": "Displays an error bubble near the wrapped input component when a non-empty string is passed to the `error` prop.\nPasses any prop except `className` down to the input.",
   "attrs": {
     "name": "Error Bubble",
     "category": "Components",
     "tags": "Ring UI Language",
     "constructor": "",
-    "description": "Displays an error bubble near the wrapped input component when a non-empty string is passed to the `error` prop.\nPasses any prop except `className` down to input.",
+    "description": "Displays an error bubble near the wrapped input component when a non-empty string is passed to the `error` prop.\nPasses any prop except `className` down to the input.",
     "example-file": "./error-bubble.examples.html"
   }
 };

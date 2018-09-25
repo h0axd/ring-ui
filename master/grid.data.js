@@ -2,7 +2,7 @@ window.source = {
   "title": "Grid",
   "url": "grid.html",
   "type": "js",
-  "content": "import React, {Component} from 'react';\nimport PropTypes from 'prop-types';\nimport classNames from 'classnames';\n\nimport styles from './grid.css';\n\n/**\n * @name Grid\n * @category Components\n * @tags Ring UI Language\n * @framework React\n * @constructor\n * @description Implements a flexbox-like grid system for components placement.\n * Inspired by React-flexbox-grid component.\n * See http://roylee0704.github.io/react-flexbox-grid/ and http://flexboxgrid.com/ for additional information.\n * @example-file ./grid.examples.html\n */\n\nexport class Grid extends Component {\n  static propTypes = {\n    className: PropTypes.string,\n    children: PropTypes.node\n  };\n\n  render() {\n    const {children, className, ...restProps} = this.props;\n    const classes = classNames(styles['container-fluid'], className);\n\n    return (\n      <div\n        {...restProps}\n        className={classes}\n      >\n        {children}\n      </div>\n    );\n  }\n}\n\nexport {default as Row} from './row';\nexport {default as Col} from './col';\n",
+  "content": "import React, {Component} from 'react';\nimport PropTypes from 'prop-types';\nimport classNames from 'classnames';\n\nimport styles from './grid.css';\n\n/**\n * @name Grid\n * @category Components\n * @tags Ring UI Language\n * @framework React\n * @constructor\n * @description Implements a flexbox-like grid system for components placement.\n * Inspired by react-flexbox-grid, see http://roylee0704.github.io/react-flexbox-grid/ and http://flexboxgrid.com/ for additional information.\n * @example-file ./grid.examples.html\n */\n\nexport class Grid extends Component {\n  static propTypes = {\n    className: PropTypes.string,\n    children: PropTypes.node\n  };\n\n  render() {\n    const {children, className, ...restProps} = this.props;\n    const classes = classNames(styles['container-fluid'], className);\n\n    return (\n      <div\n        {...restProps}\n        className={classes}\n      >\n        {children}\n      </div>\n    );\n  }\n}\n\nexport {default as Row} from './row';\nexport {default as Col} from './col';\n",
   "examples": [
     {
       "name": "Responsive grid",
@@ -115,14 +115,14 @@ window.source = {
       ]
     }
   ],
-  "description": "Implements a flexbox-like grid system for components placement.\nInspired by React-flexbox-grid component.\nSee http://roylee0704.github.io/react-flexbox-grid/ and http://flexboxgrid.com/ for additional information.",
+  "description": "Implements a flexbox-like grid system for components placement.\nInspired by react-flexbox-grid, see http://roylee0704.github.io/react-flexbox-grid/ and http://flexboxgrid.com/ for additional information.",
   "attrs": {
     "name": "Grid",
     "category": "Components",
     "tags": "Ring UI Language",
     "framework": "React",
     "constructor": "",
-    "description": "Implements a flexbox-like grid system for components placement.\nInspired by React-flexbox-grid component.\nSee http://roylee0704.github.io/react-flexbox-grid/ and http://flexboxgrid.com/ for additional information.",
+    "description": "Implements a flexbox-like grid system for components placement.\nInspired by react-flexbox-grid, see http://roylee0704.github.io/react-flexbox-grid/ and http://flexboxgrid.com/ for additional information.",
     "example-file": "./grid.examples.html"
   }
 };
