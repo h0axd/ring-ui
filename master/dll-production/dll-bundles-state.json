@@ -13,11 +13,11 @@
   },
   "react": {
     "bundle": "vendor",
-    "version": "16.6.0"
+    "version": "16.6.1"
   },
   "react-dom": {
     "bundle": "vendor",
-    "version": "16.6.0"
+    "version": "16.6.1"
   },
   "prop-types": {
     "bundle": "vendor",
