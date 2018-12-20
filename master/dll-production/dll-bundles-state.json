@@ -13,7 +13,7 @@
   },
   "react": {
     "bundle": "vendor",
-    "version": "16.6.3"
+    "version": "16.7.0"
   },
   "react-dom": {
     "bundle": "vendor",
@@ -33,7 +33,7 @@
   },
   "classnames": {
     "bundle": "vendor",
-    "version": "2.2.5"
+    "version": "2.2.6"
   },
   "combokeys": {
     "bundle": "vendor",
@@ -41,7 +41,7 @@
   },
   "moment": {
     "bundle": "vendor",
-    "version": "2.22.2"
+    "version": "2.23.0"
   },
   "simply-uuid": {
     "bundle": "vendor",
