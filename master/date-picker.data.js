@@ -16,7 +16,7 @@ window.source = {
         },
         {
           "type": "js",
-          "content": "\nimport {render} from 'react-dom';\nimport React, {Component} from 'react';\n\nimport DatePicker from '@jetbrains/ring-ui/components/date-picker/date-picker';\n\nconst container = document.getElementById('date-picker');\n\nclass DatePickerExample extends Component {\n  state = {date: '20.09.14'}\n\n  setDate = date => {\n    this.setState({date})\n  }\n\n  render() {\n    return (\n      <div>\n        <DatePicker\n          date={this.state.date}\n          onChange={this.setDate}\n        />\n      </div>\n    );\n  }\n}\n\nrender(<DatePickerExample />, container);\n  ",
+          "content": "\nimport {render} from 'react-dom';\nimport React, {Component} from 'react';\n\nimport DatePicker from '@jetbrains/ring-ui/components/date-picker/date-picker';\n\nconst container = document.getElementById('date-picker');\n\nclass DatePickerExample extends Component {\n  state = {date: '01.01.18'}\n\n  setDate = date => {\n    this.setState({date})\n  }\n\n  render() {\n    return (\n      <div>\n        <DatePicker\n          date={this.state.date}\n          onChange={this.setDate}\n        />\n      </div>\n    );\n  }\n}\n\nrender(<DatePickerExample />, container);\n  ",
           "showCode": true
         }
       ]
@@ -33,7 +33,7 @@ window.source = {
         },
         {
           "type": "js",
-          "content": "\nimport {render} from 'react-dom';\nimport React, {Component} from 'react';\n\nimport DatePicker from '@jetbrains/ring-ui/components/date-picker/date-picker';\n\nconst container = document.getElementById('date-picker');\n\nclass DatePickerExample extends Component {\n  state = {\n    from: '20 January 2015',\n    to: '7 February 2015'\n  };\n\n  setRange = ({from, to}) => {\n    this.setState({from, to});\n  }\n\n  render() {\n    return (\n      <div>\n        <DatePicker\n          from={this.state.from}\n          to={this.state.to}\n          onChange={this.setRange}\n          range\n        />\n      </div>\n    );\n  }\n}\n\nrender(<DatePickerExample />, container);\n  ",
+          "content": "\nimport {render} from 'react-dom';\nimport React, {Component} from 'react';\n\nimport DatePicker from '@jetbrains/ring-ui/components/date-picker/date-picker';\n\nconst container = document.getElementById('date-picker');\n\nclass DatePickerExample extends Component {\n  state = {\n    from: '1 January 2018',\n    to: '15 February 2018'\n  };\n\n  setRange = ({from, to}) => {\n    this.setState({from, to});\n  }\n\n  render() {\n    return (\n      <div>\n        <DatePicker\n          from={this.state.from}\n          to={this.state.to}\n          onChange={this.setRange}\n          range\n        />\n      </div>\n    );\n  }\n}\n\nrender(<DatePickerExample />, container);\n  ",
           "showCode": true
         }
       ]
@@ -50,7 +50,7 @@ window.source = {
         },
         {
           "type": "js",
-          "content": "\nimport {render} from 'react-dom';\nimport React, {Component} from 'react';\n\nimport DatePicker from '@jetbrains/ring-ui/components/date-picker/date-picker';\n\nconst container = document.getElementById('date-picker');\n\nclass DatePickerExample extends Component {\n  state = {date: '20.09.14'}\n  setDate = date => {\n    this.setState({date})\n  }\n\n  render() {\n    return (\n      <div>\n        <DatePicker\n          date={this.state.date}\n          onChange={this.setDate}\n          clear\n        />\n      </div>\n    );\n  }\n}\n\nrender(<DatePickerExample />, container);\n  ",
+          "content": "\nimport {render} from 'react-dom';\nimport React, {Component} from 'react';\n\nimport DatePicker from '@jetbrains/ring-ui/components/date-picker/date-picker';\n\nconst container = document.getElementById('date-picker');\n\nclass DatePickerExample extends Component {\n  state = {date: '01.01.18'}\n  setDate = date => {\n    this.setState({date})\n  }\n\n  render() {\n    return (\n      <div>\n        <DatePicker\n          date={this.state.date}\n          onChange={this.setDate}\n          clear\n        />\n      </div>\n    );\n  }\n}\n\nrender(<DatePickerExample />, container);\n  ",
           "showCode": true
         }
       ]
