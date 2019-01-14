@@ -2,7 +2,7 @@ window.source = {
   "title": "Loader Inline",
   "url": "loader-inline.html",
   "type": "js",
-  "content": "import React, {PureComponent} from 'react';\nimport classNames from 'classnames';\nimport PropTypes from 'prop-types';\n\nimport Theme from '../global/theme';\nimport dataTests from '../global/data-tests';\n\nimport styles from './loader-inline.css';\nimport injectStyles from './inject-styles';\n\n/**\n * @name Loader Inline\n * @category Components\n * @tags Ring UI Language\n * @constructor\n * @description Displays a small animated loader, shown inline with text. Use case: contextual loading animation.\n * @extends {ReactComponent}\n * @example-file ./loader-inline.examples.html\n */\n\nexport default class LoaderInline extends PureComponent {\n  static Theme = Theme;\n  static propTypes = {\n    theme: PropTypes.oneOf(Object.values(Theme)),\n    className: PropTypes.string,\n    'data-test': PropTypes.string\n  };\n\n  static defaultProps = {\n    theme: Theme.LIGHT\n  };\n\n  componentDidMount() {\n    injectStyles();\n  }\n\n  render() {\n    const {className, theme, 'data-test': dataTest, ...restProps} = this.props;\n\n    const classes = classNames(\n      styles.loader,\n      className,\n      `${styles.loader}_${theme}`\n    );\n\n    return (\n      <div\n        {...restProps}\n        data-test={dataTests('ring-loader-inline', dataTest)}\n        className={classes}\n      />\n    );\n  }\n}\n",
+  "content": "import React, {PureComponent} from 'react';\nimport classNames from 'classnames';\nimport PropTypes from 'prop-types';\n\nimport Theme from '../global/theme';\nimport dataTests from '../global/data-tests';\n\nimport styles from './loader-inline.css';\nimport injectStyles from './inject-styles';\n\n/**\n * @name Loader Inline\n * @category Components\n * @tags Ring UI Language\n * @constructor\n * @description Displays a small animated loader, shown inline with text. Use case: contextual loading animation.\n * @extends {ReactComponent}\n * @example-file ./loader-inline.examples.html\n */\n\nexport default class LoaderInline extends PureComponent {\n  static Theme = Theme;\n  static propTypes = {\n    theme: PropTypes.oneOf(Object.values(Theme)),\n    className: PropTypes.string,\n    'data-test': PropTypes.string,\n    children: PropTypes.node\n  };\n\n  static defaultProps = {\n    theme: Theme.LIGHT\n  };\n\n  componentDidMount() {\n    injectStyles();\n  }\n\n  render() {\n    const {className, theme, 'data-test': dataTest, children, ...restProps} = this.props;\n\n    const classes = classNames(\n      styles.loader,\n      className,\n      `${styles.loader}_${theme}`\n    );\n\n    const loader = (\n      <div\n        {...restProps}\n        data-test={dataTests('ring-loader-inline', dataTest)}\n        className={classes}\n      />\n    );\n\n    return children ? (\n      <>\n        {loader}\n        <span className={styles.children}>{children}</span>\n      </>\n    ) : loader;\n  }\n}\n",
   "examples": [
     {
       "name": "Inline loader",
@@ -17,6 +17,23 @@ window.source = {
         {
           "type": "js",
           "content": "\nimport React from 'react';\nimport {render} from 'react-dom';\nimport Loader from '@jetbrains/ring-ui/components/loader-inline/loader-inline';\n\nrender(<Loader/>, document.getElementById('loader-inline'));\n  ",
+          "showCode": true
+        }
+      ]
+    },
+    {
+      "name": "Inline loader with children",
+      "url": "examples/loader-inline/inline-loader-with-children.html",
+      "disableAutoSize": false,
+      "files": [
+        {
+          "type": "html",
+          "content": "\n<span id=\"loader-inline\"></span>\n  ",
+          "showCode": true
+        },
+        {
+          "type": "js",
+          "content": "\nimport React from 'react';\nimport {render} from 'react-dom';\nimport Loader from '@jetbrains/ring-ui/components/loader-inline/loader-inline';\n\nrender(<Loader>Loading...</Loader>, document.getElementById('loader-inline'));\n  ",
           "showCode": true
         }
       ]
