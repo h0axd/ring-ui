@@ -207,6 +207,23 @@ window.source = {
           "showCode": true
         }
       ]
+    },
+    {
+      "name": "Select-ng-multiple-many-values",
+      "url": "examples/select-ng/select-ng-multiple-many-values.html",
+      "disableAutoSize": true,
+      "files": [
+        {
+          "type": "html",
+          "content": "\n<h4>Multiple select</h4>\n<div ng-app=\"test\" ng-strict-di ng-controller=\"testCtrl as ctrl\">\n  <rg-select ng-model=\"ctrl.selectedItems\" options=\"item in ctrl.options\"\n             size=\"M\"\n             label=\"Select item\" multiple=\"ctrl.multiple\"></rg-select>\n  <div>Selected items: {{ctrl.selectedItems | json}}</div>\n  <button ng-click=\"ctrl.selectedItems.splice(0, 1)\">Deselect first item\n  </button>\n  <button ng-click=\"ctrl.options.splice(0, 1)\">Remove first option</button>\n  <button ng-click=\"ctrl.multiple = !ctrl.multiple\">Toggle multiple</button>\n</div>\n  ",
+          "showCode": true
+        },
+        {
+          "type": "js",
+          "content": "\nimport angular from 'angular';\nimport SelectNG from '@jetbrains/ring-ui/components/select-ng/select-ng';\n\nangular.module('test', [SelectNG]).controller('testCtrl', function () {\nvar ctrl = this;\nctrl.multiple = true;\nctrl.options = Array(1000).fill(null).map((it, i) => ({key: i, label: 'label-' + i}))\n});\n  ",
+          "showCode": true
+        }
+      ]
     }
   ],
   "description": "Provides an Angular wrapper for Select.\nOptions argument has one of the following forms:\n* `label` **`in`** `items`\n* `label` **`for`** `item` **`in`** `items`\n* `label` **`for`** `item` **`in`** `items` **`track by`** `trackexpr`\n* `label` **`select as`** `buttontext` **`describe as`** `description` **`for`** `item` **`in`** `items` **`track by`** `trackexpr`\n* `select` **`as`** `label` **`select as`** `buttontext` **`for`** `item` **`in`** `items`\n\nWhere:\n* `items` is an expression that evaluates to a datasource containing data to iterate over. Datasource can be an array or a function that accepts the `query` parameter and returns a promise of an array filtered by the query.\n* `item` is a local variable that will refer to each item in the items.\n* `label` – the result of this expression will be the label for &lt;option&gt; element. The expression will most likely refer to the value variable (e.g. item.name).\n* `select` – the result of this expression will be bound to the model of the parent &lt;select&gt; element. If not specified, select expression will default to item.\n* `trackexpr` is used when working with an array of objects. The result of this expression will be used to identify the objects in the array. The trackexpr will most likely refer to the item variable (e.g. item.id). Used to preserve selection even when the options are recreated (e.g. reloaded from the server).\n* `buttontext` – label for the selected item to be displayed on the button.\n* `description` – description of an item to display in the option list.\n\nExamples:\n* `item in items`\n* `item in dataSource(query)`\n* `item.text for item in items`\n* `item.text for item in items track by item.id`\n* `item.text select as item.fullText describe as item.fullDescription for item in items track by item.id`\n* `item as item.text select as makeFullText(item) for item in items`",
