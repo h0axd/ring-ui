@@ -17,7 +17,7 @@
   },
   "react-dom": {
     "bundle": "vendor",
-    "version": "16.7.0"
+    "version": "16.8.0"
   },
   "prop-types": {
     "bundle": "vendor",
