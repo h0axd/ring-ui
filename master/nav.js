@@ -610,7 +610,7 @@ window.navData = [
         "legacy": false
       },
       {
-        "url": "auth__core.html",
+        "url": "auth.html",
         "title": "Auth",
         "legacy": false
       },
