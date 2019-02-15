@@ -1,0 +1,54 @@
+{
+  "@babel/polyfill": {
+    "bundle": "vendor",
+    "version": "7.2.5"
+  },
+  "dom4": {
+    "bundle": "vendor",
+    "version": "1.8.5"
+  },
+  "whatwg-fetch": {
+    "bundle": "vendor",
+    "version": "3.0.0"
+  },
+  "react": {
+    "bundle": "vendor",
+    "version": "16.8.1"
+  },
+  "react-dom": {
+    "bundle": "vendor",
+    "version": "16.8.1"
+  },
+  "prop-types": {
+    "bundle": "vendor",
+    "version": "15.6.2"
+  },
+  "react-waypoint": {
+    "bundle": "vendor",
+    "version": "8.1.0"
+  },
+  "angular": {
+    "bundle": "vendor",
+    "version": "1.7.7"
+  },
+  "classnames": {
+    "bundle": "vendor",
+    "version": "2.2.6"
+  },
+  "combokeys": {
+    "bundle": "vendor",
+    "version": "3.0.0"
+  },
+  "moment": {
+    "bundle": "vendor",
+    "version": "2.24.0"
+  },
+  "simply-uuid": {
+    "bundle": "vendor",
+    "version": "1.0.1"
+  },
+  "sniffr": {
+    "bundle": "vendor",
+    "version": "1.2.0"
+  }
+}
