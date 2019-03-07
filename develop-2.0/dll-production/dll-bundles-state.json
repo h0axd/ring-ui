@@ -13,19 +13,19 @@
   },
   "react": {
     "bundle": "vendor",
-    "version": "16.8.1"
+    "version": "16.8.3"
   },
   "react-dom": {
     "bundle": "vendor",
-    "version": "16.8.1"
+    "version": "16.8.3"
   },
   "prop-types": {
     "bundle": "vendor",
-    "version": "15.6.2"
+    "version": "15.7.2"
   },
   "react-waypoint": {
     "bundle": "vendor",
-    "version": "8.1.0"
+    "version": "9.0.1"
   },
   "angular": {
     "bundle": "vendor",
