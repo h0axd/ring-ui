@@ -7,7 +7,7 @@ window.source = {
     {
       "name": "Popup",
       "url": "examples/popup/popup.html",
-      "disableAutoSize": true,
+      "disableAutoSize": false,
       "files": [
         {
           "type": "css",
