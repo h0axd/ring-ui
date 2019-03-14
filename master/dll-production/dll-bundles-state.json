@@ -37,7 +37,7 @@
   },
   "combokeys": {
     "bundle": "vendor",
-    "version": "3.0.0"
+    "version": "3.0.1"
   },
   "moment": {
     "bundle": "vendor",
