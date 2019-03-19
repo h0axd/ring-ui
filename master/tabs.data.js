@@ -2,7 +2,7 @@ window.source = {
   "title": "Tabs",
   "url": "tabs.html",
   "type": "js",
-  "content": "/**\n * @name Tabs\n * @category Components\n * @tags Ring UI Language\n * @framework React\n * @constructor\n * @description Displays a tab set.\n * @example-file ./tabs.examples.html\n */\n\nexport {default as Tabs} from './dumb-tabs';\nexport {default as SmartTabs} from './smart-tabs';\nexport {default as Tab} from './tab';\n",
+  "content": "/**\n * @name Tabs\n * @category Components\n * @tags Ring UI Language\n * @framework React\n * @constructor\n * @description Displays a tab set.\n * @example-file ./tabs.examples.html\n */\n\nexport {default as Tabs, CustomItem} from './dumb-tabs';\nexport {default as SmartTabs} from './smart-tabs';\nexport {default as Tab} from './tab';\n",
   "examples": [
     {
       "name": "Tabs",
@@ -77,7 +77,7 @@ window.source = {
         },
         {
           "type": "js",
-          "content": "\nimport {render} from 'react-dom';\nimport React, {Component} from 'react';\n\nimport {SmartTabs, Tab} from '@jetbrains/ring-ui/components/tabs/tabs';\nimport {SearchIcon, WarningIcon} from '@jetbrains/ring-ui/components/icon';\nimport Button from '@jetbrains/ring-ui/components/button/button';\n\nconst container = document.getElementById('tabs');\n\nfunction Title({Icon, children}) {\n  return (\n    <span>\n      <Icon\n        className=\"icon\"\n        size={Icon.Size.Size16}\n      />\n      {children}\n    </span>\n  );\n}\n\nconst tabs = (\n  <SmartTabs>\n    <Tab title={<Title Icon={SearchIcon}>First tab</Title>}>\n      First tab content\n    </Tab>\n    <Tab title={<Title Icon={WarningIcon}>Second tab</Title>}>\n      Second tab content\n    </Tab>\n    <Tab title={<Title Icon={WarningIcon}>Third tab (Link)</Title>} href=\"#href\">\n      Third tab content\n    </Tab>\n    <Button text>Action</Button>\n  </SmartTabs>\n);\n\nrender(tabs, container);\n  ",
+          "content": "\nimport {render} from 'react-dom';\nimport React, {Component} from 'react';\n\nimport {SmartTabs, Tab, CustomItem} from '@jetbrains/ring-ui/components/tabs/tabs';\nimport {SearchIcon, WarningIcon} from '@jetbrains/ring-ui/components/icon';\nimport Button from '@jetbrains/ring-ui/components/button/button';\n\nconst container = document.getElementById('tabs');\n\nfunction Title({Icon, children}) {\n  return (\n    <span>\n      <Icon\n        className=\"icon\"\n        size={Icon.Size.Size16}\n      />\n      {children}\n    </span>\n  );\n}\n\nconst tabs = (\n  <SmartTabs>\n    <Tab title={<Title Icon={SearchIcon}>First tab</Title>}>\n      First tab content\n    </Tab>\n    <Tab title={<Title Icon={WarningIcon}>Second tab</Title>}>\n      Second tab content\n    </Tab>\n    <Tab title={<Title Icon={WarningIcon}>Third tab (Link)</Title>} href=\"#href\">\n      Third tab content\n    </Tab>\n    <CustomItem>\n      <Button text>Action</Button>\n    </CustomItem>\n  </SmartTabs>\n);\n\nrender(tabs, container);\n  ",
           "showCode": true
         }
       ]
