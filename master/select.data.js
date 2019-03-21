@@ -477,6 +477,28 @@ window.source = {
           "showCode": true
         }
       ]
+    },
+    {
+      "name": "Select with filtered fields",
+      "url": "examples/select/select-with-filtered-fields.html",
+      "disableAutoSize": true,
+      "files": [
+        {
+          "type": "html",
+          "content": "\n<div id=\"demo\" class=\"demo\"></div>\n  ",
+          "showCode": true
+        },
+        {
+          "type": "css",
+          "content": "\nbody {\n  padding: 8px;\n  width: 50%;\n}\n\n:global(.filters-block) > *:not(:nth-of-type(1)) {\n  margin-left: 20px;\n}\n  ",
+          "showCode": true
+        },
+        {
+          "type": "js",
+          "content": "\nimport React, {Component} from 'react';\nimport {render} from 'react-dom';\nimport Select from '@jetbrains/ring-ui/components/select/select';\nimport List from '@jetbrains/ring-ui/components/list/list';\n\nclass SelectWrapper extends Component {\n  constructor(props) {\n    super(props);\n\n    const data = [];\n    for (let i = 1; i < 100; i++) {\n      const label = `Label ${i}`;\n      data.push({\n        key: i,\n        label,\n        template: <span className=\"label\">{label}</span>,\n        rgItemType: List.ListProps.Type.CUSTOM\n      });\n    }\n\n    const filtersData = [\n      {'label': 'Show odd', 'key': '1'},\n      {'label': 'Show even', 'key': '2'},\n      {'label': 'Show all', 'key': '3'},\n    ]\n\n    this.state = {\n      data,\n      filtersData,\n      filteredData: data.filter(item => item.key % 2),\n      selectedDataKey: null,\n      selectedFilterKey: filtersData[0].key,\n    }\n    this.onFilterSelect = this.handleFilterSelect.bind(this);\n    this.onDataSelect = this.handleDataSelect.bind(this);\n\n  }\n\n  handleFilterSelect(selected) {\n    const { data } = this.state;\n\n    let filteredData;\n    switch (selected.label) {\n      case 'Show odd':\n        filteredData = data.filter(item => item.key % 2)\n        break;\n      case 'Show even':\n        filteredData = data.filter(item => !(item.key % 2))\n        break;\n      case 'Show all':\n      default:\n        filteredData = [...data];\n    }\n\n    this.setState({...this.state, filteredData, selectedFilterKey: selected.key, selectedDataKey: null});\n\n  }\n\n  handleDataSelect(selected){\n    this.setState({...this.state, selecteData: selected});\n  }\n\n  render() {\n    const {filteredData, filtersData, selectedFilterKey, selectedDataKey} = this.state;\n    return (\n      <div class=\"filters-block\">\n        <Select\n          selectedLabel=\"Filter\"\n          label=\"Please select filter\"\n          filter\n          clear\n          selected={filtersData.filter(item => item.key === selectedFilterKey)[0]}\n          onSelect={this.onFilterSelect}\n          data={filtersData}\n        />\n        <Select\n          selectedLabel=\"Option\"\n          label=\"Please select option\"\n          filter\n          clear\n          selected={filteredData.filter(item => item.key === selectedDataKey)[0]}\n          onSelect={this.onDataSelect}\n          data={filteredData}\n        />\n      </div>\n    );\n  }\n}\n\nrender(\n  <SelectWrapper/>,\n  document.getElementById('demo')\n);\n  ",
+          "showCode": true
+        }
+      ]
     }
   ],
   "description": "Displays a select.",
